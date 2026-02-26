@@ -14,8 +14,11 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
             color: white;
         }
         .container {
@@ -33,7 +36,7 @@
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
             opacity: 0.9;
-        } 
+        }
         .badge {
             display: inline-block;
             margin-top: 1.5rem;
@@ -41,6 +44,32 @@
             background: #0078D4;
             border-radius: 20px;
             font-weight: bold;
+        }
+        .image-container {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+        .image-caption {
+            margin-top: 1rem;
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
         }
     </style>
 </head>
@@ -51,9 +80,10 @@
         <p>Estoy aprendiendo Azure Static Web Apps.</p>
         <span class="badge">Powered by Azure</span>
     </div>
-    <div>
+    <div class="image-container">
         <img src="/img/html/vangogh.jpg"
              alt="Van Gogh, Self-portrait">
+        <p class="image-caption">Van Gogh - Autorretrato</p>
     </div>
 </body>
 </html>
