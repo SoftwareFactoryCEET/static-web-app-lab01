@@ -71,6 +71,62 @@
             opacity: 0.9;
             font-style: italic;
         }
+        .form-container {
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container fieldset {
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 12px;
+            padding: 1.5rem;
+            background: transparent;
+        }
+        .form-container legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0 0.5rem;
+            color: white;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 0.6rem 1rem;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .form-container input[type="text"]::placeholder,
+        .form-container input[type="password"]::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 0.6rem;
+            background: #0078D4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #005fa3;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +140,18 @@
         <img src="/img/html/vangogh.jpg"
              alt="Van Gogh, Self-portrait">
         <p class="image-caption">Van Gogh - Autorretrato</p>
+    </div>
+    <div class="form-container">
+        <form action="/tutorial/action.html">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="email">Email</label>
+                <input type="text" placeholder="Email" name="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password">
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
     </div>
 </body>
 </html>
